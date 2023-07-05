@@ -18,6 +18,7 @@
         <div class="nav-mobile" id="nav" onclick="toggleBurgerMenu()">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#3dgallery">3D Gallery</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#history">History</a>
             <a href="#services">Services</a>
@@ -28,6 +29,7 @@
             <nav>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
+                <a href="#3dgallery">3D Gallery</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#history">History</a>
                 <a href="#services">Services</a>
@@ -72,6 +74,39 @@
                     <p>All of my customers were satisfied and a major part of them returned again.  My last customer decided to expand the project so my company earned more money.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+     <section id="3dgallery">
+        <h2>3D Gallery</h2>
+        <div class="container relative">
+             <iframe id="playcanvas"
+                src=""
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                allow="autoplay"
+                allowfullscreen="true"
+                allowvr
+                scrolling="no"
+                frameBorder="0"
+                style="width: 100%; aspect-ratio: 16 / 9; min-height: 640px; background: black;"
+                >
+            </iframe>
+            <div class="run-playcanvas" id="splash-playcanvas">
+                <div class="play-button" onclick="runPlaycanvas()">
+                    <div class="play"></div>
+                </div>
+            </div>
+            <script>
+                var playcanvasUrl = 'https://playcanv.as/p/fwGHpL2O/';
+
+                var runPlaycanvas = () => {
+                    let splash = document.getElementById('splash-playcanvas');
+                    splash.style.display = 'none';
+                    let iframe = document.getElementById('playcanvas');
+                    iframe.src = playcanvasUrl;
+                }               
+            </script>
         </div>
     </section>
 
