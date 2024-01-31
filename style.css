@@ -12,11 +12,100 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    background-color: #fff;
+    width: 8px;
+}
+
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-right: 3px solid white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+    display:none;
+}
+
+.line {
+    background-color: white;
+    width: 3px;
+    height: 3px;
+    position: fixed;
+    z-index: 100;
+}
+
+.line.up {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.line.down {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.line.left {
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.line.right {
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.corner {
+    width: 18px;
+    height: 18px;
+    position: fixed;
+    z-index: 100;
+    background-image: url('img/rounded-corner.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.corner.up-left {
+    top: 0;
+    left: 0;
+}
+
+.corner.up-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.corner.down-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.corner.down-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+
 html, body {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: var(--bg-color);
+    background-color: white;
     color: var(--text-color);
     font-family: 'Rubik';
     font-style: normal;
@@ -25,6 +114,17 @@ html, body {
     line-height: normal;
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+.wrapper {
+    background-color: var(--bg-color);
+    /*margin: 3px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: calc(100vh - 6px);
+    width: calc(100vw - 6px);
+    overflow-y: auto;
+    position: relative;*/
 }
 
 a.link {
@@ -164,6 +264,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+    filter: brightness(0.9);
 }
 
 .header-skew-box {
@@ -556,7 +657,7 @@ nav {
 }
 
 #playcanvas {
-    border: 2px solid white;
+    
 }
 
 .run-playcanvas {
@@ -566,13 +667,16 @@ nav {
     left: 0;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: calc(100% - 50px);
     height: 100%;
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 3px solid white;
+    border-radius: 32px;
+    overflow: hidden;
+    margin: 0 25px;
 }
 
 .play {

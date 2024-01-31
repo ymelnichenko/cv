@@ -10,23 +10,13 @@
 
 </head> 
 <body>
-    <header id="home">
-        <div class="burger-menu" id="burger-menu" onclick="toggleBurgerMenu()">
-            <div></div>
-            <div></div>
-        </div>
-        <div class="nav-mobile" id="nav" onclick="toggleBurgerMenu()">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#3dgallery">3D Gallery</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#history">History</a>
-            <a href="#services">Services</a>
-            <a href="#contacts">Contacts</a>
-        </div>
-
-        <div class="container">
-            <nav>
+    <div class="wrapper">
+        <header id="home">
+            <div class="burger-menu" id="burger-menu" onclick="toggleBurgerMenu()">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-mobile" id="nav" onclick="toggleBurgerMenu()">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#3dgallery">3D Gallery</a>
@@ -34,265 +24,305 @@
                 <a href="#history">History</a>
                 <a href="#services">Services</a>
                 <a href="#contacts">Contacts</a>
-            </nav>
-            <div class="header">
-                <div class="header-bg"></div>
-                <div class="header-skew-box"></div>
-                <div class="header-text">
-                    Hey, my name is
-                    <h2 class="mt-25">Yana<br>Melnichenko</h2>
-                    <a href="#contacts" class="btn mt-50 header-btn">Hire me</a>
-                </div>
-                <div class="header-social">
-                    <a href="https://www.linkedin.com/in/yana-melnichenko-44188b181/" target="_blank"><img src="img/linkedin.svg"></a>
-                    <a href="https://www.behance.net/yanamelnic6231" target="_blank"><img src="img/behance.svg" ></a>
-                    <!--
-                        <a href="" target="_blank"><img src="img/facebook.svg"></a>
-                        <a href="" target="_blank"><img src="img/instagram.svg"></a>
-                    -->
+            </div>
+
+            <div class="container">
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#3dgallery">3D Gallery</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#history">History</a>
+                    <a href="#services">Services</a>
+                    <a href="#contacts">Contacts</a>
+                </nav>
+                <div class="header">
+                    <div class="header-bg"></div>
+                    <div class="header-skew-box"></div>
+                    <div class="header-text">
+                        Hey, my name is
+                        <h2 class="mt-25">Yana<br>Melnichenko</h2>
+                        <a href="#contacts" class="btn mt-50 header-btn">Hire me</a>
+                    </div>
+                    <div class="header-social">
+                        <a href="https://www.linkedin.com/in/yana-melnichenko-44188b181/" target="_blank"><img src="img/linkedin.svg"></a>
+                        <a href="https://www.behance.net/yanamelnich6231/" target="_blank"><img src="img/behance.svg" ></a>
+                        <!--
+                            <a href="" target="_blank"><img src="img/facebook.svg"></a>
+                            <a href="" target="_blank"><img src="img/instagram.svg"></a>
+                        -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section id="about">
-        <h2>About</h2>
-        <div class="container">
-            <div class="about">
+        <section id="about">
+            <h2>About</h2>
+            <div class="container">
+                <div class="about">
+                    <div>
+                        <img src="img/about-photo.png">
+                    </div>
+                    <div>
+                        <p>I am a 3D artist with 5 years of experience.</p>
+
+                        <p>I am proficient in 3D modeling, rendering, creating Unwrap, PBR textures, and setting scenes in Unreal Engine 5. I have strong experience of working with multinational customers.</p>
+
+                        <p>I consider myself as a professional in 3D. All of my previous employers complimented my ability to be responsible, punctual, confident, determined.</p>
+
+                        <p>I am very professional. Working in 3D for 5 years helped me improve my volume spatial thinking, I learned some design concepts.</p>
+
+                        <p>All of my customers were satisfied and a major part of them returned again.  My last customer decided to expand the project so my company earned more money.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="3dgallery">
+            <h2>3D Gallery</h2>
+            <div class="container relative">
+                <iframe id="playcanvas"
+                    src=""
+                    webkitallowfullscreen="true"
+                    mozallowfullscreen="true"
+                    allow="autoplay"
+                    allowfullscreen="true"
+                    allowvr
+                    scrolling="no"
+                    frameBorder="0"
+                    style="width: 100%; aspect-ratio: 16 / 9; min-height: 640px; background: black; border-radius: 32px;"
+                    >
+                </iframe>
+                <div class="run-playcanvas" id="splash-playcanvas">
+                    <div class="play-button" onclick="runPlaycanvas()">
+                        <div class="play"></div>
+                    </div>
+                </div>
+                <script>
+                    var playcanvasUrl = 'https://playcanv.as/p/fwGHpL2O/';
+
+                    var runPlaycanvas = () => {
+                        let splash = document.getElementById('splash-playcanvas');
+                        splash.style.display = 'none';
+                        let iframe = document.getElementById('playcanvas');
+                        iframe.src = playcanvasUrl;
+                    }               
+                </script>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="container">
+                <div class="portfolio">
+                    <div class="col">
+                        <a href="#portfolio-work">
+                            <img src="gallery/col1-1-thumb.jpeg" loading="lazy" />
+                        </a>
+                        <a href="#portfolio-work">
+                            <img src="gallery/col1-2-thumb.jpeg" loading="lazy" />
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#portfolio-work">
+                            <img src="gallery/col2-1-thumb.jpeg" loading="lazy"  />
+                        </a>
+                        <a href="#portfolio-work">
+                            <img src="gallery/col2-2-thumb.jpeg" loading="lazy" />
+                        </a>
+                        <a href="#portfolio-work">
+                            <img src="gallery/col2-3-thumb.jpeg" loading="lazy" />
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#portfolio-work">
+                            <img src="gallery/col3-1-thumb.jpeg" loading="lazy"  />
+                        </a>
+                        <a href="#portfolio-work" >
+                            <img src="gallery/col3-2-thumb.jpeg" loading="lazy"  />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: none;">
+                <!-- Archviz -->
+                <a href="gallery/bedroom-1.jpg" data-fancybox="portfolio-work" data-caption="Architectural Visualization (Corona Renderer)"></a>
+                <a href="gallery/bar-1.jpg" data-fancybox="portfolio-work" data-caption="Architectural Visualization (Corona Renderer)"></a>
+
+                <!-- Unity -->
+                <a href="gallery/unity-vr-traning-1.jpg" data-fancybox="portfolio-work" data-caption="VR Training (Unity)"></a>
+                <a href="gallery/unity-vr-traning-2.jpg" data-fancybox="portfolio-work" data-caption="VR Training (Unity)"></a>
+                
+
+                <!-- Unreal -->
+                <a href="gallery/ihouse-estudio-1.jpg" data-fancybox="portfolio-work" data-caption="Exterior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-2.jpg" data-fancybox="portfolio-work" data-caption="Exterior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-3.jpg" data-fancybox="portfolio-work" data-caption="Exterior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-4.jpg" data-fancybox="portfolio-work" data-caption="Exterior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-5.jpg" data-fancybox="portfolio-work" data-caption="Exterior iHouse Estudio (UE5)"></a>            
+                <a href="gallery/ihouse-estudio-6.jpg" data-fancybox="portfolio-work" data-caption="Interior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-7.jpg" data-fancybox="portfolio-work" data-caption="Interior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-8.jpg" data-fancybox="portfolio-work" data-caption="Interior iHouse Estudio (UE5)"></a>
+                <a href="gallery/ihouse-estudio-9.jpg" data-fancybox="portfolio-work" data-caption="Interior iHouse Estudio (UE5)"></a>
+                
+                <a href="gallery/svoya-1.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                <a href="gallery/svoya-2.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                <a href="gallery/svoya-3.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                <a href="gallery/svoya-4.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                <a href="gallery/svoya-5.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                <a href="gallery/svoya-6.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                <a href="gallery/svoya-7.jpg" data-fancybox="portfolio-work" data-caption="SVOYA Apartment Project (UE5)"></a>
+                
+                <a href="gallery/ma-1.jpg" data-fancybox="portfolio-work" data-caption="Modern Apartment Project (UE5)"></a>
+                <a href="gallery/ma-2.jpg" data-fancybox="portfolio-work" data-caption="Modern Apartment Project (UE5)"></a>
+                <a href="gallery/ma-3.jpg" data-fancybox="portfolio-work" data-caption="Modern Apartment Project (UE5)"></a>
+                <a href="gallery/ma-4.jpg" data-fancybox="portfolio-work" data-caption="Modern Apartment Project (UE5)"></a>
+
+                <!-- Product Modeling&Rendering -->
+                <a href="gallery/breakfast-1.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/eat-2.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/eat-3.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/furn-1.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/furn-2.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/furn-3.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/furn-6.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/furn-7.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/furn-8.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>            
+                <a href="gallery/furn-9.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>                        
+                <a href="gallery/bath-1.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/bath-2.jpg" data-fancybox="portfolio-work" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
+                <a href="gallery/marvelous-1.jpg" data-fancybox="portfolio-work" data-caption="Cloth Modeling&Rendering (Corona Renderer + Marvelous Designer)"></a>
+                <a href="gallery/marvelous-2.jpg" data-fancybox="portfolio-work" data-caption="Cloth Modeling&Rendering (Corona Renderer + Marvelous Designer)"></a>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2>History</h2>
+            <div class="container">
+                <div class="flex-center">
+                    <div class="history">
+                        <div class="vertical-line"></div>
+                        <div class="history-item">
+                            <p>
+                                3D Artist<br>
+                                from 05.2016 to 03.2017
+                            </p>
+                            <b>Freelance</b>
+                        </div>
+
+                        <div class="history-item">
+                            <p>
+                                3D Artist<br>
+                                from 03.2017 to 08.2017
+                            </p>
+                            <b>VisEndgine Digital Solutions</b>
+                        </div>
+
+                        <div class="history-item">
+                            <p>
+                                3D Artist<br>
+                                from 08.2017 to 01.2024
+                            </p>
+                            <b>TSUKAT</b>
+                        </div>
+
+                        <div class="history-item">
+                            <p>
+                                3D Artist<br>
+                                from 02.2024 to now
+                            </p>
+                            <b>Freelance</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <div class="container">
+                <div class="services">
+                    <div class="service-item">
+                        <div class="text-center">
+                            <img src="img/building.svg">
+                        </div>
+                        <h3>3D Modeling</h3>
+                        <ul>
+                            <li>3Ds Max (low/middle poly modeling, hard surface modeling, texturing, unwrap,
+                            <li>bake textures)</li>
+                            <li>Photoshop</li>
+                            <li>Marvelous Designer</li>
+                            <li>Headus UV Layout</li>
+                            <li>Substance Painter</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="text-center">
+                            <img src="img/film.svg">
+                        </div>
+                        <h3>Visualization</h3>
+                        <ul>
+                            <li>UE5 (create levels with props, create lighting, work with materials and PBR textures, setup post processing, setup reflection, bake light, create cinematic,VR, PCWalk)</li>
+                            <li>Playcanvas</li>
+                            <li>Corona Renderer</li>
+                            <li>V-Ray</li>
+                        </ul>
+                    </div>
+    <!---
+                    <div class="service-item">
+                        <div class="text-center">
+                            <img src="img/layout.svg">
+                        </div>
+                        <h3>Landing Sites</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Photoshop</li>
+                            <li>Figma</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    -->
+        </section>
+
+        <section id="contacts">
+            <h2>Contacts</h2>
+            <div class="container text-center">
                 <div>
-                    <img src="img/about-photo.png">
+                    <a href="mailto:yana.melnichenko1991@gmail.com?Subject=Hello" class="link" target="_blank">yana.melnichenko1991@gmail.com</a>
                 </div>
                 <div>
-                    <p>I am a 3D artist with 5 years of experience.</p>
-
-                    <p>I am proficient in 3D modeling, rendering, creating Unwrap, PBR textures, and setting scenes in Unreal Engine 5. I have strong experience of working with multinational customers.</p>
-
-                    <p>I consider myself as a professional in 3D. All of my previous employers complimented my ability to be responsible, punctual, confident, determined.</p>
-
-                    <p>I am very professional. Working in 3D for 5 years helped me improve my volume spatial thinking, I learned some design concepts.</p>
-
-                    <p>All of my customers were satisfied and a major part of them returned again.  My last customer decided to expand the project so my company earned more money.</p>
+                    <a href="YanaMelnichenkoCV.pdf" target="_blank" class="btn mt-50 mb-50"><img src="img/download.svg">Download CV</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-     <section id="3dgallery">
-        <h2>3D Gallery</h2>
-        <div class="container relative">
-             <iframe id="playcanvas"
-                src=""
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                allow="autoplay"
-                allowfullscreen="true"
-                allowvr
-                scrolling="no"
-                frameBorder="0"
-                style="width: 100%; aspect-ratio: 16 / 9; min-height: 640px; background: black;"
-                >
-            </iframe>
-            <div class="run-playcanvas" id="splash-playcanvas">
-                <div class="play-button" onclick="runPlaycanvas()">
-                    <div class="play"></div>
-                </div>
-            </div>
-            <script>
-                var playcanvasUrl = 'https://playcanv.as/p/fwGHpL2O/';
+        <a href="#home" class="top"><img src="img/arrow-top.svg" loading="lazy"></a>
+    </div>
 
-                var runPlaycanvas = () => {
-                    let splash = document.getElementById('splash-playcanvas');
-                    splash.style.display = 'none';
-                    let iframe = document.getElementById('playcanvas');
-                    iframe.src = playcanvasUrl;
-                }               
-            </script>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="container">
-            <div class="portfolio">
-                <div class="col">
-                    <a href="#portfolio-1">
-                        <img src="gallery/col1-1-thumb.jpeg" loading="lazy" />
-                    </a>
-                    <a href="#portfolio-1">
-                        <img src="gallery/col1-2-thumb.jpeg" loading="lazy" />
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#portfolio-1">
-                        <img src="gallery/col2-1-thumb.jpeg" loading="lazy"  />
-                    </a>
-                    <a href="#portfolio-1">
-                        <img src="gallery/col2-2-thumb.jpeg" loading="lazy" />
-                    </a>
-                    <a href="#portfolio-1">
-                        <img src="gallery/col2-3-thumb.jpeg" loading="lazy" />
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#portfolio-1">
-                        <img src="gallery/col3-1-thumb.jpeg" loading="lazy"  />
-                    </a>
-                    <a href="#portfolio-1" >
-                        <img src="gallery/col3-2-thumb.jpeg" loading="lazy"  />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div style="display: none;">
-            <!-- Archviz -->
-            <a href="gallery/bedroom-1.jpg" data-fancybox="portfolio" data-caption="Architectural Visualization (Corona Renderer)"></a>
-            <a href="gallery/bar-1.jpg" data-fancybox="portfolio" data-caption="Architectural Visualization (Corona Renderer)"></a>
-
-            <!-- Unreal -->
-            <a href="gallery/ihouse-estudio-1.jpg" data-fancybox="portfolio" data-caption="Exterior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-2.jpg" data-fancybox="portfolio" data-caption="Exterior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-3.jpg" data-fancybox="portfolio" data-caption="Exterior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-4.jpg" data-fancybox="portfolio" data-caption="Exterior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-5.jpg" data-fancybox="portfolio" data-caption="Exterior iHouse Estudio (UE5)"></a>            
-            <a href="gallery/ihouse-estudio-6.jpg" data-fancybox="portfolio" data-caption="Interior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-7.jpg" data-fancybox="portfolio" data-caption="Interior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-8.jpg" data-fancybox="portfolio" data-caption="Interior iHouse Estudio (UE5)"></a>
-            <a href="gallery/ihouse-estudio-9.jpg" data-fancybox="portfolio" data-caption="Interior iHouse Estudio (UE5)"></a>
-            
-            <a href="gallery/svoya-1.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            <a href="gallery/svoya-2.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            <a href="gallery/svoya-3.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            <a href="gallery/svoya-4.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            <a href="gallery/svoya-5.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            <a href="gallery/svoya-6.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            <a href="gallery/svoya-7.jpg" data-fancybox="portfolio" data-caption="SVOYA Apartment Project (UE5)"></a>
-            
-            <a href="gallery/ma-1.jpg" data-fancybox="portfolio" data-caption="Modern Apartment Project (UE5)"></a>
-            <a href="gallery/ma-2.jpg" data-fancybox="portfolio" data-caption="Modern Apartment Project (UE5)"></a>
-            <a href="gallery/ma-3.jpg" data-fancybox="portfolio" data-caption="Modern Apartment Project (UE5)"></a>
-            <a href="gallery/ma-4.jpg" data-fancybox="portfolio" data-caption="Modern Apartment Project (UE5)"></a>
-
-            <!-- Product Modeling&Rendering -->
-            <a href="gallery/breakfast-1.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/eat-2.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/eat-3.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/furn-1.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/furn-2.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/furn-3.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/furn-6.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/furn-7.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/furn-8.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>            
-            <a href="gallery/furn-9.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>            
-            <a href="gallery/marvelous-1.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer + Marvelous Designer)"></a>
-            <a href="gallery/bath-1.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-            <a href="gallery/bath-2.jpg" data-fancybox="portfolio" data-caption="Product Modeling&Rendering (Corona Renderer)"></a>
-        </div>
-    </section>
-
-    <section id="history">
-        <h2>History</h2>
-        <div class="container">
-            <div class="flex-center">
-                <div class="history">
-                    <div class="vertical-line"></div>
-                    <div class="history-item">
-                        <p>
-                            3D Artist<br>
-                            from 05.2016 to 03.2017
-                        </p>
-                        <b>FREELANCE</b>
-                    </div>
-
-                    <div class="history-item">
-                        <p>
-                            3D Artist<br>
-                            from 03.2017 to 08.2017
-                        </p>
-                        <b>VisEndgine Digital Solutions</b>
-                    </div>
-
-                    <div class="history-item">
-                        <p>
-                            3D Artist<br>
-                            from 08.2017 to now
-                        </p>
-                        <b>TSUKAT</b>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Services</h2>
-        <div class="container">
-            <div class="services">
-                <div class="service-item">
-                    <div class="text-center">
-                        <img src="img/building.svg">
-                    </div>
-                    <h3>3D Modeling</h3>
-                    <ul>
-                        <li>3Ds Max (low/middle poly modeling, hard surface modeling, texturing, unwrap,
-                        <li>bake textures)</li>
-                        <li>Photoshop</li>
-                        <li>Marvelous Designer</li>
-                        <li>Headus UV Layout</li>
-                        <li>Substance Painter</li>
-                    </ul>
-                </div>
-
-                <div class="service-item">
-                    <div class="text-center">
-                        <img src="img/film.svg">
-                    </div>
-                    <h3>Visualization</h3>
-                    <ul>
-                        <li>UE5 (create levels with props, create lighting, work with materials and PBR textures, setup post processing, setup reflection, bake light, create cinematic,VR, PCWalk)</li>
-                        <li>Playcanvas</li>
-                        <li>Corona Renderer</li>
-                        <li>V-Ray</li>
-                    </ul>
-                </div>
-<!---
-                <div class="service-item">
-                    <div class="text-center">
-                        <img src="img/layout.svg">
-                    </div>
-                    <h3>Landing Sites</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Photoshop</li>
-                        <li>Figma</li>
-                        <li>VS Code</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
--->
-    </section>
-
-    <section id="contacts">
-        <h2>Contacts</h2>
-        <div class="container text-center">
-            <div>
-                <a href="mailto:yana.melnichenko1991@gmail.com?Subject=Hello" class="link" target="_blank">yana.melnichenko1991@gmail.com</a>
-            </div>
-            <div>
-                <a href="YanaMelnichenkoCV.pdf" target="_blank" class="btn mt-50 mb-50"><img src="img/download.svg">Download CV</a>
-            </div>
-        </div>
-    </section>
-
-    <a href="#home" class="top">&uarr;</a>
+    <div class="line up"></div>
+    <div class="line down"></div>
+    <div class="line left"></div>
+    <div class="line right"></div>
+    <div class="corner up-left"></div>
+    <div class="corner up-right"></div>
+    <div class="corner down-left"></div>
+    <div class="corner down-right"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <script>
-        Fancybox.bind('[data-fancybox="portfolio"]', {
-        // Your custom options
+        Fancybox.bind('[data-fancybox="portfolio-work"]', {
+            on: {
+                close: (fancybox, slide) => {
+                    window.location.hash = 'portfolio';
+                    fancybox.close();
+                }
+            }
         });
 
         function toggleBurgerMenu() {
