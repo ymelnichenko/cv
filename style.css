@@ -185,7 +185,6 @@ h3 {
     z-index: 10;
     right: 25px;
     bottom: 5px;
-    mix-blend-mode: difference;
     justify-content: center;
     align-items: center;
     padding: 30px 10px;
@@ -296,7 +295,6 @@ header {
 
 .header-text {
     z-index: 2;
-    mix-blend-mode: difference;
     margin-top: 61px;
     overflow: hidden;
 }
@@ -355,7 +353,6 @@ nav {
     top: 0;
     display: flex;
     gap: 50px;
-    mix-blend-mode: difference;
 }
 
 nav a {
