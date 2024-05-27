@@ -341,7 +341,6 @@
 
         // Set email link
         emailData = (dataContacts.filter(i => i.type == 'mail'))[0];
-        console.log(emailData)
         const emailLink = document.querySelector('#emailLink');
         emailLink.href = emailData.url
         emailLink.innerHTML = emailData.name
