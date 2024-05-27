@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Welcome to Yana's page!</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/icon">
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/icon">   
 </head> 
 <body>
     <div class="wrapper">
@@ -44,13 +43,8 @@
                         <h2 class="mt-25">Yana<br>Melnichenko</h2>
                         <a href="#contacts" class="btn mt-50 header-btn">Hire me</a>
                     </div>
-                    <div class="header-social">
-                        <a href="https://www.linkedin.com/in/yana-melnichenko-44188b181/" target="_blank"><img src="img/linkedin.svg"></a>
-                        <a href="https://www.behance.net/yanamelnich6231/" target="_blank"><img src="img/behance.svg" ></a>
-                        <!--
-                            <a href="" target="_blank"><img src="img/facebook.svg"></a>
-                            <a href="" target="_blank"><img src="img/instagram.svg"></a>
-                        -->
+                    <div class="header-social" id="socialHeader">
+                        <!-- Here contacts -->
                     </div>
                 </div>
             </div>
@@ -292,8 +286,11 @@
         <section id="contacts">
             <h2>Contacts</h2>
             <div class="container text-center">
+                <div class="footer-social" id="socialFooter">
+                    <!-- Here contacts -->
+                </div>
                 <div>
-                    <a href="mailto:yana.melnichenko1991@gmail.com?Subject=Hello" class="link" target="_blank">yana.melnichenko1991@gmail.com</a>
+                    <a id="emailLink" href="" class="link" target="_blank"></a>
                 </div>
                 <div>
                     <a href="YanaMelnichenkoCV.pdf" target="_blank" class="btn mt-50 mb-50"><img src="img/download.svg">Download CV</a>
@@ -315,6 +312,41 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <script>        
+        const dataContacts = [
+            {name: 'LinkedIn', url: 'https://www.linkedin.com/in/yana-melnichenko-44188b181/', img: 'img/linkedin.svg', type: 'site'},
+            {name: 'Telegram', url: 'https://t.me/yanameln1', img: 'img/tg.svg', type: 'messenger'},
+            {name: 'Call Me!', url: 'tel:+380937533126', img: 'img/call.svg', type: 'call'},
+            {name: 'yana.melnichenko1991@gmail.com', url: 'mailto:yana.melnichenko1991@gmail.com?Subject=Hello', img: 'img/mail.svg', type: 'mail'},
+            {name: 'Behance', url: 'https://www.behance.net/yanamelnich6231/', img: 'img/behance.svg', type: 'site'},
+            {name: 'YouTube', url: 'https://www.youtube.com/@yana_mel', img: 'img/youtube.svg', type: 'site'}
+        ]
+
+        function addContacts(selector) {
+            const insertTo = document.querySelector(selector);
+            dataContacts.forEach((i) => {
+                let a = document.createElement('a');
+                let {url, name, img} = i
+                a.href = url;
+                a.target = '_blank';
+                a.innerHTML = `<img src="${img}" title="${name}">`;
+                insertTo.appendChild(a);
+            });
+        }
+
+        // Add contacts
+        addContacts('#socialHeader');
+        addContacts('#socialFooter');
+
+        // Set email link
+        emailData = (dataContacts.filter(i => i.type == 'mail'))[0];
+        console.log(emailData)
+        const emailLink = document.querySelector('#emailLink');
+        emailLink.href = emailData.url
+        emailLink.innerHTML = emailData.name
+    </script>
+    
     <script>
         Fancybox.bind('[data-fancybox="portfolio-work"]', {
             on: {

@@ -235,22 +235,37 @@ header {
     background-color: white;
 }
 
-.header-social {
+
+.header-social,
+.footer-social {
     z-index: 3;
     position: absolute;
     right: 90px;
     display: flex;
     gap: 16px;
     flex-direction: column;
+    align-items: center;
 }
 
-.header-social a {
+.header-social a,
+.footer-social a {
     transition: 0.1s linear all;
     text-decoration: none;
 }
 
-.header-social a:hover {
+.header-social a:hover,
+.footer-social a:hover {
     transform: scale(1.2);
+}
+
+.footer-social {
+    position: relative;
+    flex-direction: row;
+    left: auto;
+    right: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 32px;
 }
 
 .header-bg {
@@ -578,9 +593,9 @@ section h2 {
 
     .header-social {
         flex-direction: row;
-        bottom: 25px;
-        filter: invert(1);
+        bottom: 100px;        
         right: auto;
+        align-items: center;
     }
 
     .header-text {
